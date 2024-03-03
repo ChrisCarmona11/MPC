@@ -1,0 +1,35 @@
+/*
+ * main implementation: use this 'C' sample to create your own application
+ *
+ */
+
+
+
+
+
+#include "derivative.h" /* include peripheral declarations */
+#include <stdio.h>
+#include <stdlib.h>
+#include <cstdio>
+
+FILE *filePointer;
+
+int main(void)
+{
+	int counter = 0;
+
+	filePointer = fopen("constantes_int_1.h","r");
+	
+	char *content;
+	char *fileFinalPointer;
+	fseek(fileFinalPointer, 0L, SEEK_END);
+	int sz = ftell(fileFinalPointer);
+	fgets(content,sz , filePointer);
+	printf(content);
+	
+	for(;;) {	   
+	   	counter++;
+	}
+	
+	return 0;
+}

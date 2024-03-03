@@ -1,0 +1,27 @@
+/*
+ * main implementation: use this 'C' sample to create your own application
+ *
+ */
+
+
+
+
+
+#include "derivative.h" /* include peripheral declarations */
+#include <stdio.h>
+
+FILE *fprt;
+
+int main(void)
+{
+	int counter = 0;
+	fprt = fopen("constantes_int_1.h","r");
+	
+	
+	
+	for(;;) {	   
+	   	counter++;
+	}
+	
+	return 0;
+}
