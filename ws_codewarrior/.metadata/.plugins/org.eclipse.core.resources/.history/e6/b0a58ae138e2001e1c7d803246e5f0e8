@@ -1,0 +1,34 @@
+/*
+ * Zumbador.c
+ *
+ *  Created on: Mar 14, 2024
+ *      Author: chris
+ */
+
+
+#define FTM1_MOD_VALUE 24000 //Periodo T (0-65536)
+
+void initPWM(){
+	 //Habilitamos el clock al FTM1 (Flex Timer Module)
+	 SIM_SCGC6 |= SIM_SCGC6_FTM1_MASK;
+	 // Configuración puerto PTA8 (buzzer) como salida:
+	 PORTA_PCR8 = PORT_PCR_MUX(3) | PORT_PCR_DSE_MASK;
+	 // Configuracion Timer
+	 FTM1_MODE |= FTM_MODE_WPDIS_MASK;
+	 FTM1_MODE &= ~1;
+	 FTM1_QDCTRL &=~FTM_QDCTRL_QUADEN_MASK;
+	 FTM1_CNT = 0x0;
+	 FTM1_MOD = FTM1_MOD_VALUE;
+	 FTM1_CNTIN = 0;
+	 FTM1_C0SC |= FTM_CnSC_ELSB_MASK;
+	 FTM1_C0SC &= ~FTM_CnSC_ELSA_MASK;
+	 FTM1_C0SC |= FTM_CnSC_MSB_MASK;
+	 FTM1_C0V = FTM1_MOD_VALUE;
+	 FTM1_SC = FTM_SC_PS(0) | FTM_SC_CLKS(1);
+}
+
+void _PWM(float DutyCycle){
+	float D = DutyCycle*0.01;//D en tanto por 1
+	//Toff=(1-D)*T
+	FTM1_C0V = (int) ((1.0-D) * (float)FTM1_MOD_VALUE);
+}

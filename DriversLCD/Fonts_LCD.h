@@ -18,6 +18,7 @@
     External Constants
   */
   
+//  extern const U08 _MINUS[];
   extern const U08 _0[];
   extern const U08 _1[];
   extern const U08 _2[];

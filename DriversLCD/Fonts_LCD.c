@@ -5,6 +5,16 @@
   These arrays have the definition for the different characters. Currently
   only numbers, capitol letters, exclamation and colon mark.
 */
+const U08 _MINUS[CHAR_SIZE] = 
+{
+  0,0,0,0,0,
+  0,0,0,0,0,
+  0,0,0,0,0,
+  1,1,1,1,1,
+  0,0,0,0,0,
+  0,0,0,0,0,
+  0,0,0,0,0,
+};
 const U08 _0[CHAR_SIZE] = 
 {
   0,1,1,1,0,
@@ -425,7 +435,7 @@ const U08 * Fonts[] =
   _NULL,
   _NULL,
   _NULL,
-  _NULL,
+  _MINUS,
   _Dot,
   _NULL,
   (U08 *)_0,

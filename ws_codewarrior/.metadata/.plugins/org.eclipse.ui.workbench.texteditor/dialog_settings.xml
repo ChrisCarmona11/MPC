@@ -2,28 +2,37 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="257" key="DIALOG_WIDTH"/>
-		<item value="270" key="DIALOG_Y_ORIGIN"/>
-		<item value="840" key="DIALOG_X_ORIGIN"/>
+		<item value="266" key="DIALOG_Y_ORIGIN"/>
 		<item value="381" key="DIALOG_HEIGHT"/>
+		<item value="540" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="wrap"/>
-		<item value="true" key="casesensitive"/>
 		<item value="false" key="isRegEx"/>
+		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
-		<item value="false" key="wholeword"/>
-		<item value="int_counter" key="selection"/>
+		<item value="true" key="wholeword"/>
+		<item value="" key="selection"/>
 		<list key="findhistory">
-			<item value="int_counter"/>
-			<item value="indexer"/>
-			<item value="LPTMR_INTERRUPT"/>
-			<item value="lptmr_interrupt"/>
-			<item value="LDVAL_TRIGGER_1MS"/>
-			<item value="contador_ms"/>
-			<item value="beq.n&#x09;26 &lt;main+0x26&gt;"/>
+			<item value="delay"/>
+			<item value="sleep"/>
+			<item value="Byte_Low"/>
+			<item value="Byte_High"/>
+			<item value="float"/>
+			<item value="pantalla"/>
+			<item value="sprint"/>
+			<item value="Flag_interrup"/>
 		</list>
 		<list key="replacehistory">
+			<item value="Num_Low"/>
+			<item value="Num_High"/>
+			<item value="PIT0_INTERRUP_FLAG"/>
+			<item value="canal"/>
+			<item value="promedio"/>
+			<item value="min"/>
+			<item value="buffer2"/>
+			<item value="regist"/>
 		</list>
 	</section>
 </section>
