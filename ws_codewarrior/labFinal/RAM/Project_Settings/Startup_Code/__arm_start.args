@@ -4,11 +4,13 @@
 -g3
 -gdwarf-2
 -gstrict-dwarf
--I"C:/Users/chris/Master/MPC/ws_codewarrior/labFinal/Project_Headers"
--I"C:/Users/chris/Master/MPC/ws_codewarrior/labFinal/Project_Settings/Startup_Code"
+-ID:/Master/MPC/ws_codewarrior/labFinal/Project_Headers
+-ID:/Master/MPC/ws_codewarrior/labFinal/Project_Settings/Startup_Code
 -I"C:/Freescale/CW MCU v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include"
 -I"C:/Freescale/CW MCU v11.1/MCU/ARM_GCC_Support/ewl/EWL_Runtime/include"
--I"C:/Users/chris/Master/MPC/DriversLCD"
+-IC:/Users/chris/Master/MPC/DriversLCD
+-I../../../../DriverLCD
+-I"D:/Master/MPC/DriversLCD"
 -O0
 -ffunction-sections
 -fdata-sections

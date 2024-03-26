@@ -7,9 +7,10 @@
 
 #include <MK40DZ10.h>
 
-#define FTM1_MOD_VALUE 24000 //Periodo T (0-65536)
+#define FTM1_MOD_VALUE 22000 //Periodo T (0-65536)
 
-void initPWM(){
+void initPWM()
+{
 	 //Habilitamos el clock al FTM1 (Flex Timer Module)
 	 SIM_SCGC6 |= SIM_SCGC6_FTM1_MASK;
 	 // Configuración puerto PTA8 (buzzer) como salida:
@@ -28,8 +29,21 @@ void initPWM(){
 	 FTM1_SC = FTM_SC_PS(0) | FTM_SC_CLKS(1);
 }
 
-void _PWM(float DutyCycle){
+void _PWM(float DutyCycle)
+{
 	float D = DutyCycle*0.01;//D en tanto por 1
 	//Toff=(1-D)*T
 	FTM1_C0V = (int) ((1.0-D) * (float)FTM1_MOD_VALUE);
+}
+void Buzz(int numberOfBuzzez)
+{
+	int j= 0;
+	for (j = 0; j <= numberOfBuzzez;j++)
+	{
+		_PWM(50);
+		time_delay(1);
+		_PWM(0);
+		time_delay(1);
+	}
+	 
 }
